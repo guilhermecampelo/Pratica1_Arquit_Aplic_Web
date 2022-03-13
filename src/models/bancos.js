@@ -3,19 +3,19 @@ var fs = require('fs');
 function bancos() {}
 
 bancos.prototype.getBancos = function(callback) {
-  fs.readFile('./data/bancos.json', 'utf8', function(err, result) {
+  fs.readFile('./data/bancosBr.json', 'utf8', function(err, result) {
     var data = [];
 
     if (!err) {
       var obj = JSON.parse(result);
 
-      if (obj.bancos.length > 9) {
-        var i = 9;
+      if (obj.bancosBr.length > 4) {
+        var i = 4;
       } else {
-        var i = (obj.bancos.length - 1);
+        var i = (obj.bancosBr.length - 1);
       }
     
-      obj.bancos.forEach(function(banco) {
+      obj.bancosBr.forEach(function(banco) {
         if (i >=  0) {
           data[i] = banco;
 	        i--;
