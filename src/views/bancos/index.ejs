@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prática 01</title>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <br/><br/><br/>
+      <h2>Arquitetura em Aplicações Web</h2>
+      <h4>Prática 01</h4>
+      <h4>Aluno: Guilherme Pena Campelo</h4>
+      <br/>
+      <br/>
+      <% if (bancos.length > 0) { %>
+        <div class="row">
+          <% for(var i = 0; i < bancos.length; i++) {%>
+            <div class="col-md-12 jumbotron">
+              <h6><%= bancos[i].COMPE %></h6>
+              <h6><%= bancos[i].ShortName %></h6>
+              <h6><%= bancos[i].Document %></h6>
+              <h6><%= bancos[i].Type %></h6>
+              <h6><%= bancos[i].Url %></h6>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>
