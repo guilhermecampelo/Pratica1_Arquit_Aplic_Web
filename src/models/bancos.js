@@ -3,21 +3,21 @@ var fs = require('fs');
 function bancos() {}
 
 bancos.prototype.getBancos = function(callback) {
-  fs.readFile('./data/bancosBr.json', 'utf8', function(err, result) {
+  fs.readFile('./data/bancosBrs.json', 'utf8', function(err, result) {
     var data = [];
 
     if (!err) {
       var obj = JSON.parse(result);
 
-      if (obj.bancosBr.length > 4) {
-        var i = 4;
+      if (obj.bancosBrs.length > 9) {
+        var i = 9;
       } else {
-        var i = (obj.bancosBr.length - 1);
+        var i = (obj.bancosBrs.length - 1);
       }
     
-      obj.bancosBr.forEach(function(banco) {
+      obj.bancosBrs.forEach(function(bancosBr) {
         if (i >=  0) {
-          data[i] = banco;
+          data[i] = bancosBr;
 	        i--;
         }
       });
