@@ -9,8 +9,8 @@ bancos.prototype.getBancos = function(callback) {
     if (!err) {
       var obj = JSON.parse(result);
 
-      if (obj.bancosBrs.length > 4) {
-        var i = 4;
+      if (obj.bancosBrs.length > 9) {
+        var i = 9;
       } else {
         var i = (obj.bancosBrs.length - 1);
       }

@@ -18,11 +18,11 @@
         <div class="row">
           <% for(var i = 0; i < bancos.length; i++) {%>
             <div class="col-md-12 jumbotron">
-              <h6><%= bancos[i].COMPE %></h6>
-              <h6><%= bancos[i].ShortName %></h6>
-              <h6><%= bancos[i].Document %></h6>
-              <h6><%= bancos[i].Type %></h6>
-              <h6><%= bancos[i].Url %></h6>
+              <h6>COMPE: <%= bancos[i].COMPE %></h6>
+              <h6>NOME: <%= bancos[i].ShortName %></h6>
+              <h6>CNPJ: <%= bancos[i].Document %></h6>
+              <h6>TIPO: <%= bancos[i].Type %></h6>
+              <h6>URL: <%= bancos[i].Url %></h6>
             </div>
           <% } %>
         </div>
